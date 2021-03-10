@@ -1,12 +1,28 @@
+import { Theme } from "@material-ui/core";
+import { Styles } from "@material-ui/core/styles/withStyles";
 import {
 	defaultFont,
 	dangerColor,
 	whiteColor,
-} from "assets/jss/material-dashboard-react.js";
+} from "./../../material-dashboard-react";
 
-import dropdownStyle from "assets/jss/material-dashboard-react/dropdownStyle.js";
+import dropdownStyle from "./../dropdownStyle";
 
-const headerLinksStyle = (theme) => ({
+const headerLinksStyle = (
+	theme: Theme
+): Styles<
+	Theme,
+	{},
+	| "search"
+	| "linkText"
+	| "buttonLink"
+	| "searchButton"
+	| "margin"
+	| "searchIcon"
+	| "notifications"
+	| "manager"
+	| "searchWrapper"
+> => ({
 	...dropdownStyle(theme),
 	search: {
 		"& > div": {
@@ -26,7 +42,7 @@ const headerLinksStyle = (theme) => ({
 		},
 	},
 	linkText: {
-		zIndex: "4",
+		zIndex: 4,
 		...defaultFont,
 		fontSize: "14px",
 		margin: "0px",
@@ -64,15 +80,15 @@ const headerLinksStyle = (theme) => ({
 		},
 	},
 	margin: {
-		zIndex: "4",
+		zIndex: 4,
 		margin: "0",
 	},
 	searchIcon: {
 		width: "17px",
-		zIndex: "4",
+		zIndex: 4,
 	},
 	notifications: {
-		zIndex: "4",
+		zIndex: 4,
 		[theme.breakpoints.up("md")]: {
 			position: "absolute",
 			top: "2px",

@@ -1,3 +1,5 @@
+import { Theme } from "@material-ui/core";
+import { Styles } from "@material-ui/core/styles/withStyles";
 import {
 	grayColor,
 	primaryColor,
@@ -9,9 +11,29 @@ import {
 	whiteColor,
 	blackColor,
 	hexToRgb,
-} from "assets/jss/material-dashboard-react.js";
+} from "./../../material-dashboard-react";
 
-const buttonStyle = {
+const buttonStyle: Styles<
+	Theme,
+	{},
+	| "button"
+	| "white"
+	| "rose"
+	| "primary"
+	| "info"
+	| "success"
+	| "warning"
+	| "danger"
+	| "simple"
+	| "transparent"
+	| "disabled"
+	| "lg"
+	| "sm"
+	| "round"
+	| "block"
+	| "link"
+	| "justIcon"
+> = {
 	button: {
 		minHeight: "auto",
 		minWidth: "auto",
@@ -31,7 +53,7 @@ const buttonStyle = {
 		padding: "12px 30px",
 		margin: ".3125rem 1px",
 		fontSize: "12px",
-		fontWeight: "400",
+		fontWeight: 400,
 		textTransform: "uppercase",
 		letterSpacing: "0",
 		willChange: "box-shadow, transform",

@@ -1,11 +1,24 @@
+import { Theme } from "@material-ui/core";
+import { Styles } from "@material-ui/core/styles/withStyles";
 import {
 	defaultFont,
 	container,
 	primaryColor,
 	grayColor,
-} from "assets/jss/material-dashboard-react.js";
+} from "./../../material-dashboard-react";
 
-const footerStyle = {
+const footerStyle: Styles<
+	Theme,
+	{},
+	| "block"
+	| "left"
+	| "right"
+	| "footer"
+	| "container"
+	| "a"
+	| "list"
+	| "inlineBlock"
+> = {
 	block: {
 		color: "inherit",
 		padding: "15px",
@@ -15,18 +28,18 @@ const footerStyle = {
 		position: "relative",
 		display: "block",
 		...defaultFont,
-		fontWeight: "500",
+		fontWeight: 500,
 		fontSize: "12px",
 	},
 	left: {
-		float: "left!important",
+		float: "left",
 		display: "block",
 	},
 	right: {
 		padding: "15px 0",
 		margin: "0",
 		fontSize: "14px",
-		float: "right!important",
+		float: "right",
 	},
 	footer: {
 		bottom: "0",
@@ -36,7 +49,7 @@ const footerStyle = {
 	},
 	container,
 	a: {
-		color: primaryColor,
+		color: primaryColor[0],
 		textDecoration: "none",
 		backgroundColor: "transparent",
 	},

@@ -1,6 +1,12 @@
-import { hexToRgb, blackColor } from "assets/jss/material-dashboard-react.js";
+import { Theme } from "@material-ui/core";
+import { Styles } from "@material-ui/core/styles/withStyles";
+import { hexToRgb, blackColor } from "./../../material-dashboard-react";
 
-const cardAvatarStyle = {
+const cardAvatarStyle: Styles<
+	Theme,
+	{},
+	"cardAvatar" | "cardAvatarProfile" | "cardAvatarPlain"
+> = {
 	cardAvatar: {
 		"&$cardAvatarProfile img": {
 			width: "100%",

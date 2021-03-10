@@ -1,12 +1,27 @@
+import { Theme } from "@material-ui/core";
+import { Styles } from "@material-ui/core/styles/withStyles";
 import {
 	primaryColor,
 	dangerColor,
 	successColor,
 	grayColor,
 	defaultFont,
-} from "assets/jss/material-dashboard-react.js";
+} from "./../../material-dashboard-react";
 
-const customInputStyle = {
+const customInputStyle: Styles<
+	Theme,
+	{},
+	| "disabled"
+	| "underline"
+	| "underlineError"
+	| "underlineSuccess"
+	| "labelRoot"
+	| "labelRootError"
+	| "labelRootSuccess"
+	| "feedback"
+	| "marginTop"
+	| "formControl"
+> = {
 	disabled: {
 		"&:before": {
 			backgroundColor: "transparent !important",
@@ -34,7 +49,7 @@ const customInputStyle = {
 	labelRoot: {
 		...defaultFont,
 		color: grayColor[3] + " !important",
-		fontWeight: "400",
+		fontWeight: 400,
 		fontSize: "14px",
 		lineHeight: "1.42857",
 		letterSpacing: "unset",
@@ -48,8 +63,8 @@ const customInputStyle = {
 	feedback: {
 		position: "absolute",
 		top: "18px",
-		right: "0",
-		zIndex: "2",
+		right: 0,
+		zIndex: 2,
 		display: "block",
 		width: "24px",
 		height: "24px",

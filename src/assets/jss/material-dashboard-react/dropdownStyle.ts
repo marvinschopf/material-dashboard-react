@@ -1,3 +1,5 @@
+import { Theme } from "@material-ui/core";
+import { Styles } from "@material-ui/core/styles/withStyles";
 import {
 	primaryColor,
 	whiteColor,
@@ -6,9 +8,22 @@ import {
 	blackColor,
 	grayColor,
 	hexToRgb,
-} from "assets/jss/material-dashboard-react.js";
+} from "./../material-dashboard-react";
 
-const dropdownStyle = (theme) => ({
+const dropdownStyle = (
+	theme: Theme
+): Styles<
+	Theme,
+	{},
+	| "buttonLink"
+	| "links"
+	| "linkText"
+	| "popperClose"
+	| "popperResponsive"
+	| "popperNav"
+	| "dropdown"
+	| "dropdownItem"
+> => ({
 	buttonLink: {
 		[theme.breakpoints.down("md")]: {
 			display: "flex",
@@ -19,7 +34,7 @@ const dropdownStyle = (theme) => ({
 	links: {
 		width: "20px",
 		height: "20px",
-		zIndex: "4",
+		zIndex: 4,
 		[theme.breakpoints.down("md")]: {
 			display: "block",
 			width: "30px",
@@ -29,7 +44,7 @@ const dropdownStyle = (theme) => ({
 		},
 	},
 	linkText: {
-		zIndex: "4",
+		zIndex: 4,
 		...defaultFont,
 		fontSize: "14px",
 	},
@@ -83,7 +98,7 @@ const dropdownStyle = (theme) => ({
 		border: "0",
 		boxShadow: "0 2px 5px 0 rgba(" + hexToRgb(blackColor) + ", 0.26)",
 		top: "100%",
-		zIndex: "1000",
+		zIndex: 1000,
 		minWidth: "160px",
 		padding: "5px 0",
 		margin: "2px 0 0",
@@ -107,7 +122,7 @@ const dropdownStyle = (theme) => ({
 		transition: "all 150ms linear",
 		display: "block",
 		clear: "both",
-		fontWeight: "400",
+		fontWeight: 400,
 		lineHeight: "1.42857143",
 		color: grayColor[8],
 		whiteSpace: "nowrap",

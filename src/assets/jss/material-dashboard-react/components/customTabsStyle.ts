@@ -1,6 +1,18 @@
-import { hexToRgb, whiteColor } from "assets/jss/material-dashboard-react.js";
+import { Theme } from "@material-ui/core";
+import { Styles } from "@material-ui/core/styles/withStyles";
+import { hexToRgb, whiteColor } from "./../../material-dashboard-react";
 
-const customTabsStyle = {
+const customTabsStyle: Styles<
+	Theme,
+	{},
+	| "cardTitle"
+	| "cardTitleRTL"
+	| "displayNone"
+	| "tabsRoot"
+	| "tabRootButton"
+	| "tabSelected"
+	| "tabWrapper"
+> = {
 	cardTitle: {
 		float: "left",
 		padding: "10px 10px 10px 0px",
@@ -49,7 +61,7 @@ const customTabsStyle = {
 		height: "unset !important",
 		maxWidth: "unset !important",
 		maxHeight: "unset !important",
-		fontWeight: "500",
+		fontWeight: 500,
 		fontSize: "12px",
 		marginTop: "1px",
 		"& > svg,& > .material-icons": {

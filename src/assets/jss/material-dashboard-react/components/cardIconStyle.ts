@@ -1,3 +1,5 @@
+import { Theme } from "@material-ui/core";
+import { Styles } from "@material-ui/core/styles/withStyles";
 import {
 	warningCardHeader,
 	successCardHeader,
@@ -6,9 +8,19 @@ import {
 	primaryCardHeader,
 	roseCardHeader,
 	grayColor,
-} from "assets/jss/material-dashboard-react.js";
+} from "./../../material-dashboard-react";
 
-const cardIconStyle = {
+const cardIconStyle: Styles<
+	Theme,
+	{},
+	| "cardIcon"
+	| "warningCardHeader"
+	| "successCardHeader"
+	| "dangerCardHeader"
+	| "infoCardHeader"
+	| "primaryCardHeader"
+	| "roseCardHeader"
+> = {
 	cardIcon: {
 		"&$warningCardHeader,&$successCardHeader,&$dangerCardHeader,&$infoCardHeader,&$primaryCardHeader,&$roseCardHeader": {
 			borderRadius: "3px",

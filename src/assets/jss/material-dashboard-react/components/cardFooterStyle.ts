@@ -1,6 +1,16 @@
-import { grayColor } from "assets/jss/material-dashboard-react.js";
+import { Theme } from "@material-ui/core";
+import { Styles } from "@material-ui/core/styles/withStyles";
+import { grayColor } from "./../../material-dashboard-react";
 
-const cardFooterStyle = {
+const cardFooterStyle: Styles<
+	Theme,
+	{},
+	| "cardFooter"
+	| "cardFooterProfile"
+	| "cardFooterPlain"
+	| "cardFooterStats"
+	| "cardFooterChart"
+> = {
 	cardFooter: {
 		padding: "0",
 		paddingTop: "10px",
