@@ -1,14 +1,14 @@
 {
-  "compilerOptions": {
-    "target": "ES2015",
-    "module": "ES2020",
-    "strict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "./build",
-    "declaration": true
-  },
-  "include": [
-    "./src"
-  ]
+	"compilerOptions": {
+		"target": "ES2015",
+		"module": "ES2020",
+		"strict": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"outDir": "./build",
+		"declaration": true,
+		"moduleResolution": "node",
+		"jsx": "react"
+	},
+	"include": ["./src"]
 }
